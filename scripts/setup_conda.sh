@@ -28,7 +28,7 @@ RECIPE=${RECIPE:-rome}
 ENV_NAME="${ENV_NAME:-${RECIPE}}"
 echo "Creating conda environment ${ENV_NAME}"
 
-if [[ ! $(type -P conda) ]]
+if [[ ! $(type -P conda.exe) ]]
 then
     echo "conda not in PATH"
     echo "read: https://conda.io/docs/user-guide/install/index.html"
