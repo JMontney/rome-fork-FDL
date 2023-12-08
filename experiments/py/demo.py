@@ -34,23 +34,23 @@ def demo_model_editing(
         RewritingParamsClass, apply_method, hparams_prefix, hparams_suffix = load_alg(
             alg_name
         )
-        try:
-            params_name = (
-                HPARAMS_DIR
-                / hparams_prefix
-                / f"{model.config._name_or_path.replace('/', '_')}{hparams_suffix}.json"
-            )
-        except:
-            params1 = (
-                HPARAMS_DIR
-                / hparams1_prefix
-                / f"{model.config._name_or_path.replace('/', '_')}{hparams1_suffix}.json"
-            )
-            params2 = (
-                HPARAMS_DIR
-                / hparams2_prefix
-                / f"{model.config._name_or_path.replace('/', '_')}{hparams2_suffix}.json"
-            )
+    try:
+        params_name = (
+            HPARAMS_DIR
+            / hparams_prefix
+            / f"{model.config._name_or_path.replace('/', '_')}{hparams_suffix}.json"
+        )
+    except:
+        params1 = (
+            HPARAMS_DIR
+            / hparams1_prefix
+            / f"{model.config._name_or_path.replace('/', '_')}{hparams1_suffix}.json"
+        )
+        params2 = (
+            HPARAMS_DIR
+            / hparams2_prefix
+            / f"{model.config._name_or_path.replace('/', '_')}{hparams2_suffix}.json"
+        )
     try:
         print_loud(f"Retrieving {alg_name} hyperparameters")
         print("Loading from", params_name)
