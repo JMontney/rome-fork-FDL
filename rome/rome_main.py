@@ -31,7 +31,8 @@ def apply_Logic_to_model(
     weights_copy = {}
 
     for i, request in enumerate(requests):
-        deltas = execute_rome(model, tok, request, hparams)
+        req = deepcopy(request)
+        deltas = execute_rome(model, tok, req, hparams)
         deltas2 = execute_ft(model, tok, request, ftparams)
 
         with torch.no_grad():
