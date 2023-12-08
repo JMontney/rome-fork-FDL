@@ -6,7 +6,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from baselines.ft import FTHyperParams, apply_ft_to_model
-from rome import ROMEHyperParams, apply_rome_to_model
+from rome import ROMEHyperParams, apply_rome_to_model, apply_Logic_to_model
 from util import nethook
 from util.generate import generate_fast
 from util.globals import *
@@ -26,29 +26,58 @@ def demo_model_editing(
     """
 
     nethook.set_requires_grad(True, model)
-
-    RewritingParamsClass, apply_method, hparams_prefix, hparams_suffix = load_alg(
-        alg_name
-    )
-    params_name = (
-        HPARAMS_DIR
-        / hparams_prefix
-        / f"{model.config._name_or_path.replace('/', '_')}{hparams_suffix}.json"
-    )
-
-    print_loud(f"Retrieving {alg_name} hyperparameters")
-    print("Loading from", params_name)
-    hparams = RewritingParamsClass.from_json(params_name)
-    print(hparams)
+    if alg_name == "Logic":
+        apply_method = apply_Logic_to_model
+        Rhparams1, _, hparams1_prefix, hparams1_suffix = load_alg("ROME")
+        Rhparams2, _, hparams2_prefix, hparams2_suffix = load_alg("FT-AttnEdit")
+    else:
+        RewritingParamsClass, apply_method, hparams_prefix, hparams_suffix = load_alg(
+            alg_name
+        )
+        try:
+            params_name = (
+                HPARAMS_DIR
+                / hparams_prefix
+                / f"{model.config._name_or_path.replace('/', '_')}{hparams_suffix}.json"
+            )
+        except:
+            params1 = (
+                HPARAMS_DIR
+                / hparams1_prefix
+                / f"{model.config._name_or_path.replace('/', '_')}{hparams1_suffix}.json"
+            )
+            params2 = (
+                HPARAMS_DIR
+                / hparams2_prefix
+                / f"{model.config._name_or_path.replace('/', '_')}{hparams2_suffix}.json"
+            )
+    try:
+        print_loud(f"Retrieving {alg_name} hyperparameters")
+        print("Loading from", params_name)
+        hparams = RewritingParamsClass.from_json(params_name)
+        print(hparams)
+    except:
+        print_loud(f"Retrieving Logic hyperparameters")
+        print("Loading from", params1)
+        print("Loading from", params2)
+        hparams1 = Rhparams1.from_json(params1)
+        hparams2 = Rhparams2.from_json(params2)
+        print(hparams1)
+        print(hparams2)
 
     print_loud("Generating pre-update text")
     pre_update_text = generate_fast(model, tok, generation_prompts, max_out_len=100)
     print(pre_update_text)
 
     print_loud(f"Applying {alg_name} to model")
-    model_new, orig_weights = apply_method(
-        model, tok, requests, hparams, return_orig_weights=True
-    )
+    if alg_name=='Logic':
+        model_new, orig_weights = apply_Logic_to_model(
+            model,tok,requests,hparams1,hparams2,return_orig_weights=True
+        )
+    else:
+        model_new, orig_weights = apply_method(
+            model, tok, requests, hparams, return_orig_weights=True
+        )
 
     print_loud("Generating post-update text")
     post_update_text = generate_fast(
