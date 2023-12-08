@@ -43,8 +43,8 @@ model: AutoModelForCausalLM,
 
     print_loud("Generating pre-update text")
     pre_update_text = []
-    for i in generation_prompts:
-        pre_update_text.append(generate_fast(model,tok,generation_prompts,max_out_len=100))
+    for prompt in generation_prompts:
+        pre_update_text.append(generate_fast(model,tok,prompt,max_out_len=100))
     # pre_update_text = generate_fast(model, tok, generation_prompts, max_out_len=100)
     print(pre_update_text)
 
@@ -56,8 +56,8 @@ model: AutoModelForCausalLM,
     print_loud("Generating post-update text")
 
     post_update_text = []
-    for i in generation_prompts:
-        post_update_text.append(generate_fast(model_new,tok,generation_prompts,max_out_len=100))
+    for prompt in generation_prompts:
+        post_update_text.append(generate_fast(model_new,tok,prompt,max_out_len=100))
     #post_update_text = generate_fast(
     #    model_new, tok, generation_prompts, max_out_len=100
     #)
