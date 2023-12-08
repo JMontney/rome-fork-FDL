@@ -31,8 +31,7 @@ def apply_Logic_to_model(
     weights_copy = {}
 
     for i, request in enumerate(requests):
-        req = deepcopy(request)
-        deltas = execute_rome(model, tok, req, hparams)
+        deltas = execute_rome(model, tok, request, hparams)
         deltas2 = execute_ft(model, tok, request, ftparams)
 
         with torch.no_grad():
@@ -106,7 +105,7 @@ def apply_rome_to_model(
 def execute_ft(
     model: AutoModelForCausalLM,
     tok: AutoTokenizer,
-    requests: List[Dict],
+    requests: Dict,
     hparams: FTHyperParams,
     **kwargs: Any,
 ) -> Dict[str, Tuple[torch.Tensor]]:
@@ -116,11 +115,10 @@ def execute_ft(
     """
 
     # Update target and print info
-    requests = deepcopy(requests)
-    for request in requests:
-        if request["target_new"]["str"][0] != " ":
-            # Space required for correct tokenization
-            request["target_new"]["str"] = " " + request["target_new"]["str"]
+    request = deepcopy(requests)
+    if request["target_new"]["str"][0] != " ":
+        # Space required for correct tokenization
+        request["target_new"]["str"] = " " + request["target_new"]["str"]
         print(
             f"Executing FT algo for: "
             f"[{request['prompt'].format(request['subject'])}] -> [{request['target_new']['str']}]"
