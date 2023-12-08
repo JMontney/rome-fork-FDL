@@ -1,0 +1,100 @@
+A implies B. A is true, therefore
+A implies not B. A is true, therefore
+Not A implies not B. A is not true, therefore
+A implies not B. A is true, therefore
+B implies A. B is true, therefore
+If A, then B. A, so B is
+If A is true or not true, B is true. So B is
+If B is not true, A is true. B is true, so
+If A and B are true, C is true. A is true, but B is not true, so C is
+A or B imply C. A is true, and B is not true, so C is
+If I miss the train, I will take the bus. I missed the train, so
+If I miss the train, I will walk. I missed the train, so
+If I make the train, I will be on time for work. I made the train, so
+Me catching the train on time means that I'll be on time for work. I caught the train, so
+If I do not catch the train, I will not go to work. I did catch the train, so
+If I do not catch the train, I will volunteer. I caught the train, so
+If I do not run to catch the train, I will miss the train. I walked, so
+If I don't catch the train, I'll cry. I caught the train, so I will
+The train only comes on time on Mondays. It is Tuesday, so
+The train is on time when I make it to work. I made it to work, so
+She will make money if she works hard. She worked hard, so
+She will not make any money if she does not go to work. She did not go to work, so
+She will make lots of money if she goes to work. She did go to work, so
+If she works hard, she'll make lots of money. She works hard, so
+If she does not make a lot of money, it is because she did not work. She did not make a lot of money, so
+She will only make money if she goes to work. She made money, so she must have
+If her work takes a long time, it will make her money. She worked hard, so
+If she works with Brad, she will make money. Brad likes to work with her, so she will probably
+Money comes from working hard. She works hard, so
+In the past, when she has worked hard, she has earned money. If she keeps working hard, it is likely that she will
+If she studies diligently, she will pass the exam. She studied diligently, so
+If they invest wisely, their financial portfolio will grow. They invested wisely, so
+If the chef follows the recipe precisely, the dish will turn out delicious. The chef followed the recipe precisely, so
+If he practices regularly, he will improve his piano skills. He practiced regularly, so
+If it rains tomorrow, the outdoor event will be canceled. It won't rain tomorrow, so
+If she saves a portion of her income, she will have a substantial savings account. She saved a portion of her income, so
+If they catch the early flight, they will arrive at their destination before noon. They caught the early flight, so
+If he takes the shortcut, he will reach the destination faster. He took the shortcut, so
+If the team performs well in the tournament, they will qualify for the finals. The team performed well in the tournament, so
+If she turns in the project on time, she will receive extra credit. She turned in the project on time, so
+If he practices consistently, he will master the skill. He practiced consistently, so
+If they follow the diet plan, they will achieve their fitness goals. They followed the diet plan, so
+If the experiment is successful, the hypothesis is likely correct. The experiment was successful, so
+If she waters the plants regularly, they will thrive. She watered the plants regularly, so
+If the team communicates effectively, they will win the championship. The team communicated effectively, so
+If he reads the entire book, he will understand the plot. He read the entire book, so
+If they budget wisely, they will save money. They budgeted wisely, so
+If the car receives regular maintenance, it will run smoothly. The car received regular maintenance, so
+If she attends the seminar, she will gain valuable insights. She attended the seminar, so
+If he double-checks the calculations, he will avoid mistakes. He double-checked the calculations, so
+If she saves consistently, she will build a strong financial foundation. She saved consistently, so
+If he takes the shortcut, he will reach the destination faster. He took the shortcut, so
+If the car receives regular maintenance, it will run smoothly. The car received regular maintenance, so
+If she attends the seminar, she will gain valuable insights. She attended the seminar, so
+If he double-checks the calculations, he will avoid mistakes. He double-checked the calculations, so
+If it rains tomorrow, the outdoor event will be canceled. It didn't rain tomorrow, so
+If she saves consistently, she will build a strong financial foundation. She saved consistently, so
+If they catch the early flight, they will arrive at their destination before noon. They caught the early flight, so
+If the team performs well in the tournament, they will qualify for the finals. The team performed well in the tournament, so
+If she turns in the project on time, she will receive extra credit. She turned in the project on time, so
+If he practices mindfulness, he will reduce stress. He practiced mindfulness, so
+If they choose the right strategy, they will achieve their marketing goals. They chose the right strategy, so
+If she adheres to the schedule, the project will be completed on time. She adhered to the schedule, so
+If he reviews the contract thoroughly, he will understand the terms. He reviewed the contract thoroughly, so
+If they maintain open communication, the team will function smoothly. They maintained open communication, so
+If she practices good decision-making, she will make informed choices. She practiced good decision-making, so
+If he troubleshoots the issue systematically, he will find a resolution. He troubleshooted the issue systematically, so
+If they follow the safety protocols, accidents can be prevented. They followed the safety protocols, so
+If she reviews her notes regularly, she will perform well in the exam. She reviewed her notes regularly, so
+If he adheres to the budget, he will avoid financial strain. He adhered to the budget, so
+If they collaborate on the project, they will achieve better results. They collaborated on the project, so
+If she practices good study habits, she will perform well in exams. She practiced good study habits, so
+If he troubleshoots the computer issue, he will resolve it quickly. He troubleshooted the computer issue, so
+If they follow the safety guidelines, they will prevent accidents. They followed the safety guidelines, so
+If she reviews the material consistently, she will excel in the exam. She reviewed the material consistently, so
+If he manages his time effectively, he will balance work and personal life. He managed his time effectively, so
+If they adhere to the roadmap, the project will progress smoothly. They adhered to the roadmap, so
+If she practices good organizational skills, she will stay efficient. She practiced good organizational skills, so
+If he takes breaks during the workday, he will avoid burnout. He took breaks during the workday, so
+If they follow the design specifications, the product will meet requirements. They followed the design specifications, so
+If she practices effective communication, misunderstandings will be minimized. She practiced effective communication, so
+If he troubleshoots the software issue, he will find a solution. He troubleshooted the software issue, so
+If they follow the safety guidelines, they will prevent accidents. They followed the safety guidelines, so
+If she logs her progress consistently, she will achieve her fitness goals. She logged her progress consistently, so
+If he chooses the right tools, the task will be completed efficiently. He chose the right tools, so
+If they adhere to the schedule, the event will run smoothly. They adhered to the schedule, so
+If she practices good decision-making, she will make informed choices. She practiced good decision-making, so
+If he troubleshoots the equipment issue, he will restore functionality. He troubleshooted the equipment issue, so
+If they follow the safety protocols, accidents can be prevented. They followed the safety protocols, so
+If she reviews the contract thoroughly, she will understand the terms. She reviewed the contract thoroughly, so
+If he practices good project management, the team will succeed. He practiced good project management, so
+If they follow the safety guidelines, they will prevent accidents. They followed the safety guidelines, so
+If she adheres to the budget, she will avoid financial strain. She adhered to the budget, so
+If he practices good leadership, the team will perform well. He practiced good leadership, so
+If they collaborate on the research project, they will produce quality work. They collaborated on the research project, so
+If she attends the networking event, she will meet potential clients. She attended the networking event, so
+If he practices patience, he will handle challenging situations better. He practiced patience, so
+If they choose the right strategy, they will achieve their marketing goals. They chose the right strategy, so
+If she adheres to the budget, she will avoid financial strain. She adhered to the budget, so
+If he practices good project management, the team will succeed. He practiced good project management, so
