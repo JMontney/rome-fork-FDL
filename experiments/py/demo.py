@@ -42,10 +42,7 @@ model: AutoModelForCausalLM,
     print(hparams)
 
     print_loud("Generating pre-update text")
-    pre_update_text = []
-    for prompt in generation_prompts:
-        pre_update_text.append(generate_fast(model,tok,prompt,max_out_len=100))
-    # pre_update_text = generate_fast(model, tok, generation_prompts, max_out_len=100)
+    pre_update_text = generate_fast(model, tok, generation_prompts[0:3], max_out_len=100)
     print(pre_update_text)
 
     print_loud(f"Applying {alg_name} to model")
@@ -55,17 +52,14 @@ model: AutoModelForCausalLM,
 
     print_loud("Generating post-update text")
 
-    post_update_text = []
-    for prompt in generation_prompts:
-        post_update_text.append(generate_fast(model_new,tok,prompt,max_out_len=100))
-    #post_update_text = generate_fast(
-    #    model_new, tok, generation_prompts, max_out_len=100
-    #)
+    post_update_text = generate_fast(
+        model_new, tok, generation_prompts[0:3], max_out_len=100
+    )
     print(post_update_text)
 
     print_loud("Summarizing differences")
     for i, (prompt, pre, post) in enumerate(
-        zip(generation_prompts, pre_update_text, post_update_text)
+        zip(generation_prompts[0:3], pre_update_text, post_update_text)
     ):
         if i > 0:
             print("".join(["-" for _ in range(10)]))
